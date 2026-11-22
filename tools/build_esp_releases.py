@@ -43,7 +43,7 @@ def render_cards(releases):
             f'        <span class="project-number">{badge} &nbsp; {release_channel(release)} · {escape(tag)}</span>',
             f'        <h2>AION 2 ESP {version}</h2>',
             f'        <p>Published <time datetime="{date}">{date}</time>. Open the release page for downloads, compatibility information, and release details.</p>',
-            f'        <a class="text-link" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">View {escape(tag)} release ↗</a>',
+            f'        <a class="button button-primary" href="{escape(url, quote=True)}" target="_blank" rel="noopener noreferrer">DOWNLOAD</a>',
             '      </article>',
         ])
     lines.append('    </section>')
