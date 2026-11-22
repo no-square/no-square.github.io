@@ -8,6 +8,8 @@ on:
       - 'routes/**'
       - 'tools/build_announcements.py'
       - 'tools/test_build_announcements.py'
+      - 'tools/build_esp_releases.py'
+      - 'tools/test_build_esp_releases.py'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
   schedule:
@@ -38,21 +40,23 @@ jobs:
         uses: actions/setup-python@v6.0.0
         with:
           python-version: '3.x'
-      - name: Test announcement history
-        run: python -m unittest discover -s tools -p test_build_announcements.py -v
+      - name: Test release builders
+        run: python -m unittest discover -s tools -p 'test_build_*.py' -v
       - name: Build announcement feed
         run: python tools/build_announcements.py
-      - name: Preserve announcement history
+      - name: Update ESP release cards
+        run: python tools/build_esp_releases.py
+      - name: Preserve release updates
         shell: bash
         run: |
-          if git diff --quiet -- site/data/announcements.json; then
-            echo "Announcement history is unchanged."
+          if git diff --quiet -- site/data/announcements.json site/esp.html; then
+            echo "Release updates are unchanged."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add site/data/announcements.json
-          git commit -m "Update persistent announcement history"
+          git add site/data/announcements.json site/esp.html
+          git commit -m "Update announcement history and ESP releases"
           git push origin HEAD:main
       - name: Prepare site bundle
         shell: bash
