@@ -73,9 +73,9 @@ a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid 
 .footer-home { font-size: 20px; }
 .footer-links { display: flex; align-items: center; gap: 18px; }
 .site-footer .footer-links>a { color: #c4d5dd; }
-.footer-discord { display: inline-flex; align-items: center; gap: 7px; }
-.footer-discord img { display: block; width: 17px; height: 17px; }
-.footer-discord:hover { color: var(--cyan) !important; }
+.footer-discord, .footer-patreon { display: inline-flex; align-items: center; gap: 7px; }
+.footer-discord img, .footer-patreon img { display: block; width: 17px; height: 17px; }
+.footer-discord:hover, .footer-patreon:hover { color: var(--cyan) !important; }
 .home-page .site-footer { display: none; }
 .content-page { min-height: calc(100vh - 140px); padding-top: 74px; }
 .page-intro { max-width: 740px; margin-bottom: 38px; }
