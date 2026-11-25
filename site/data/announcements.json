@@ -1,7 +1,29 @@
 {
   "schema": 1,
-  "generated_at": "2026-11-21T07:21:44.535488Z",
+  "generated_at": "2026-11-25T21:48:00.511365Z",
   "items": [
+    {
+      "kind": "release",
+      "date": "2026-11-25",
+      "published_at": "2026-11-25T13:04:44Z",
+      "product": "Better A2",
+      "tag": "BETA",
+      "version": "a2param-beta-2026.11.25.2",
+      "title": "Better A2 a2param-beta-2026.11.25.2",
+      "body": "Better A2 a2param-beta-2026.11.25.2 is available. Open the release page for details and downloads.",
+      "url": "https://github.com/no-square/bettera2/releases/tag/a2param-beta-2026.11.25.2"
+    },
+    {
+      "kind": "release",
+      "date": "2026-11-25",
+      "published_at": "2026-11-25T11:45:58Z",
+      "product": "Better A2",
+      "tag": "BETA",
+      "version": "a2param-beta-2026.11.25.1",
+      "title": "Better A2 a2param-beta-2026.11.25.1",
+      "body": "Better A2 a2param-beta-2026.11.25.1 is available. Open the release page for details and downloads.",
+      "url": "https://github.com/no-square/bettera2/releases/tag/a2param-beta-2026.11.25.1"
+    },
     {
       "kind": "release",
       "date": "2026-11-21",
